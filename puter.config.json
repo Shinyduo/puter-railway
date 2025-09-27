@@ -1,0 +1,5 @@
+{
+  "http_port": 4100,
+  "domain": "${PUTER_DOMAIN}",
+  "api": { "domain": "${PUTER_API_DOMAIN}" }
+}
