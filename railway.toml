@@ -1,0 +1,16 @@
+[build]
+builder = "Docker"
+
+[env]
+PORT = "4100"
+
+# Useful for health checks (Puter serves HTTP on 4100)
+[[services]]
+name = "puter"
+start = "node /app/server.js"
+# If the base image uses a different start, you can omit the line above.
+# Railway will honor Docker CMD/ENTRYPOINT.
+
+[deploy]
+healthcheckPath = "/"
+healthcheckTimeout = 300
